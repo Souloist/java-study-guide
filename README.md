@@ -35,7 +35,7 @@ public Foo(){
 ```
 It is important to note that constructors do not have a return type. If there was a return type, this would be a method. 
 
-Constructors can be used to intialize important object states. With multiple constuctors, it is possible to initialize different instance variables upon instantiation. For example, you can write a default constructor which does not take a parameter and a another constructor that edits the instance variable based off input.
+Constructors can be used to intialize important object states. With multiple constuctors, it is possible to initialize different instance variables upon instantiation. For example, you can write a default constructor which does not take a parameter and a another constructor that edits the instance variable based off input. This is known as overloading a constructor.
 
 ```java
 public class Dog()
@@ -44,12 +44,12 @@ public class Dog()
   
   public Dog()
   {
-    size = 15;
+    weight = 15;
   }
   
   public Dog(int addWeight)
   {
-    size = addWeight;
+    weight = addWeight;
   }
 }
 ```
@@ -58,4 +58,16 @@ This way you can set the dog's weight if you know its weight or use the default 
 ```java
 Dog randomDog = new Dog(); // This dog has weight = 15
 Dog corgi = new Dog(5); // This dog has weight = 5
+```
+
+It is also important to remember that the complier will **NOT** always create a no-arg constructor if you have made a constuctor with arguments. This means that if you create constructors with arguments, you must also create the no-arg constructor. Also remember that each constructor must have a different argument list. 
+For example:
+```java
+// not ok
+public Dog(int weight, boolean isHappy){}
+public Dog(int weight, boolean isSad){}
+
+// ok (since the order is different)
+public Dog(int weight, boolean isHappy){}
+public Dog(boolean isHappy, int weight){}
 ```
