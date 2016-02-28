@@ -126,3 +126,7 @@ public class Dog {
 
 ## Public vs Private 
 
+## Java Collections Diagram
+
+![Markdown Here logo](https://github.com/Souloist/Java-Study-Guide/blob/master/javaCollections.png)
+
