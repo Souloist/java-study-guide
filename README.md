@@ -1,8 +1,14 @@
 # Java-Study-Guide
 
-Java notes
+**Table of Contents**
 
-# Stack vs Heap
+- [Stack vs Heap](#stack-vs-heap)
+- [Steps of Object Creation](#steps-of-object-creation)
+- [Constructors](#constructors)
+- [Static vs Non-Static](#static-vs-non-static)
+- [Public vs Private](#public-vs-private)
+
+## Stack vs Heap
 
 In java, there are two important areas of memory, the Stack and the Heap. 
 
@@ -17,13 +23,13 @@ The Heap contains:
 1. **Objects** - When an object is instantiated, memory is allocated in the heap to fit the object. 
 2. **Instance variables** - A variable declared inside a class but not inside a method. This includes primitive instance variables and object reference variables. Depending on the primitive, java will allocate that much space on the heap to fit the primitive instance variable. However for object reference variables, memory is only allocated for the reference variable itself since you can declare a reference variable and not assign it to an object. Once the object the reference variable is referencing is actually created, then memory is allocated for that object. 
 
-# Steps of Object Creation
+## Steps of Object Creation
 
 1. **Declaration** - Declare a reference variable  
 2. **Creation** - create an object using the new keyword and calling the object constructor. 
 3. **Assignment** - assign the reference variable to the object. It is important to remember that an object without a reference variable pointing at it will be deleted by the garbage collector. 
 
-# Constructors
+## Constructors
 
 Calling a constructor instantiates an object. The only way to invoke a constructor is with the keyword **new**. Every class that you create will have a constructor. If fact, if you dont explicitly make one, the compliter will write one for you. By default it will look like:
 ```java
@@ -69,7 +75,7 @@ public Dog(int weight, boolean isHappy){}
 public Dog(boolean isHappy, int weight){}
 ```
 
-# Static vs Non-Static
+## Static vs Non-Static
 
 The keyword **static** when applied to a method allows the method to be run **without having to create an instance of that class**. This means that static methods are called using the class (ex. Math.random()) while non-static methods are called using an instance reference (ex corgi.bark()). 
 
@@ -118,5 +124,5 @@ public class Dog {
 
 **tldr: Statics can't see instance variable states**
 
-# Public vs Private 
+## Public vs Private 
 
