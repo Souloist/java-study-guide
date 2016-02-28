@@ -20,7 +20,10 @@ The Heap contains:
 # Steps of Object Creation
 
 1. Declaration - Declare a reference variable  
-2. Creation  - create an object using the new keyword and calling the object constructor. Ex ```java Dog corgi = new Dog() ```
+2. Creation  - create an object using the new keyword and calling the object constructor. 
+```java
+Dog corgi = new Dog() 
+```
 3. Assignment - assign the reference variable to the object. It is important to remember that an object without a reference variable pointing at it will be deleted by the garbage collector. 
 
 # Constructors
