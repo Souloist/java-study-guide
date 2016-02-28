@@ -71,19 +71,52 @@ public Dog(boolean isHappy, int weight){}
 
 # Static vs Non-Static
 
-The keyword **static** when applied to a method allows the method to be run **without having to create an instance of that class**. In other words, it means that the method is not dependent on an instance variable and therefore an instance of the class is not required. 
+The keyword **static** when applied to a method allows the method to be run **without having to create an instance of that class**. This means that static methods are called using the class (ex. Math.random()) while non-static methods are called using an instance reference (ex corgi.bark()). 
+
+Also the static method is not dependent on an instance variable and therefore an instance of the class is not required. This means that if you mark a method as static, it no longer has the ability to refer to any instance variables. So the following will result in an error:
 
 ```java
-public class Song 
+public class Dog {
+  privite int size;
+  
+  public static void main (String[] args)
   {
-  String title;
-  public Song(String t) // Constructor
-    title = t;
+    System.out.println("Size of dog is " + size); // This line will result in an error becuase the complier does not know which object's instance variable you are refering to
   }
   
-  public void play() // This method is non-static becuase it utlizes the instance variable title.
+  public void setSize(int s) //setter method for size
   {
-    SoundPlayer player = new SoundPlayer();
-    player.playSound(title);
+    size = s;
+  }
+  
+  public int getSize() //getter method for size
+  {
+    return size;
   }
 ```
+By extension, static methods cannot call other non-static methods either becuase non-static methods usually use instance variables. Therefore the following will also throw an error:
+
+```java
+public class Dog {
+  privite int size;
+  
+  public static void main (String[] args)
+  {
+    System.out.println("Size of dog is " + getSize()); // This line will result in an error 
+  }
+  
+  public void setSize(int s) //setter method for size
+  {
+    size = s;
+  }
+  
+  public int getSize() //getter method for size
+  {
+    return size;
+  }
+```
+
+**tldr: Statics can't see instance variable states**
+
+# Public vs Private 
+
