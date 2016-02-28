@@ -56,6 +56,6 @@ public class Dog()
 This way you can set the dog's weight if you know its weight or use the default constructor if you are unsure.
 
 ```java
-Dog randomDog = new Dog();
-Dog corgi = new Dog(5);
-'''
+Dog randomDog = new Dog(); // This dog has weight = 15
+Dog corgi = new Dog(5); // This dog has weight = 5
+```
