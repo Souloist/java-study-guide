@@ -21,6 +21,7 @@ The Heap contains:
 
 1. **Declaration** - Declare a reference variable  
 2. **Creation** - create an object using the new keyword and calling the object constructor. 
+
 ```java
 Dog corgi = new Dog();
 ```
@@ -35,7 +36,7 @@ public Foo(){
 ```
 It is important to note that constructors do not have a return type. If there was a return type, this would be a method. 
 
-Constructors can be used to intialize important object states. With multiple constuctors, it is possible to initialize different instance variables upon instantiation. For example, you can write a default constructor which does not take a parameter and a another constructor that edits the instance variable based off input. This is known as overloading a constructor.
+Constructors can be used to intialize important object states. Constructors must also have the same name as the class. With multiple constuctors, it is possible to initialize different instance variables upon instantiation. For example, you can write a default constructor which does not take a parameter and a another constructor that edits the instance variable based off input. This is known as overloading a constructor.
 
 ```java
 public class Dog()
