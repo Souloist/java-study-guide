@@ -94,7 +94,7 @@ public class Dog {
     return size;
   }
 ```
-By extension, static methods cannot call other non-static methods either becuase non-static methods usually use instance variables. Therefore the following will also throw an error:
+By extension, static methods cannot call other non-static methods either becuase non-static methods usually use instance variables. Even if the non-static method being called uses no instance variables, the complier will not allow you to call it. Therefore the following will also throw an error:
 
 ```java
 public class Dog {
