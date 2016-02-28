@@ -35,7 +35,7 @@ It is important to note that constructors do not have a return type. If there wa
 Constructors can be used to intialize important object states. Constructors must also have the same name as the class. With multiple constuctors, it is possible to initialize different instance variables upon instantiation. For example, you can write a default constructor which does not take a parameter and a another constructor that edits the instance variable based off input. This is known as overloading a constructor.
 
 ```java
-public class Dog()
+public class Dog
 {
   int weight;
   
@@ -67,4 +67,23 @@ public Dog(int weight, boolean isSad){}
 // ok (since the order is different)
 public Dog(int weight, boolean isHappy){}
 public Dog(boolean isHappy, int weight){}
+```
+
+# Static vs Non-Static
+
+The keyword **static** when applied to a method allows the method to be run **without having to create an instance of that class**. In other words, it means that the method is not dependent on an instance variable and therefore an instance of the class is not required. 
+
+```java
+public class Song 
+  {
+  String title;
+  public Song(String t) // Constructor
+    title = t;
+  }
+  
+  public void play() // This method is non-static becuase it utlizes the instance variable title.
+  {
+    SoundPlayer player = new SoundPlayer();
+    player.playSound(title);
+  }
 ```
