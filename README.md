@@ -3,6 +3,7 @@
 **Table of Contents**
 
 - [Stack vs Heap](#stack-vs-heap)
+- [Object Orientation](#object-orientation)
 - [Steps of Object Creation](#steps-of-object-creation)
 - [Constructors](#constructors)
 - [Static vs Non-Static](#static-vs-non-static)
@@ -22,6 +23,15 @@ The Heap contains:
 
 1. **Objects** - When an object is instantiated, memory is allocated in the heap to fit the object. 
 2. **Instance variables** - A variable declared inside a class but not inside a method. This includes primitive instance variables and object reference variables. Depending on the primitive, java will allocate that much space on the heap to fit the primitive instance variable. However for object reference variables, memory is only allocated for the reference variable itself since you can declare a reference variable and not assign it to an object. Once the object the reference variable is referencing is actually created, then memory is allocated for that object. 
+
+## Object Orientation
+
+There are three key features in object-oriented programming:
+
+1. **Encapsulation**
+2. **Inheritance**
+3. **Polymorphism**
+
 
 ## Steps of Object Creation
 
