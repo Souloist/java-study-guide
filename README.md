@@ -8,7 +8,7 @@
 - [Constructors](#constructors)
 - [Static vs Non-Static](#static-vs-non-static)
 - [Public vs Private](#public-vs-private)
-- [Run-time Exception vs Compiler Error](#run-time-exception-vs-compiler-error)
+- [Run-time Exception vs Compiler Error](#runtime-exception-vs-compiler-error)
 
 ## Stack vs Heap
 
@@ -137,7 +137,7 @@ public class Dog {
 
 ## Public vs Private 
 
-## Run-time Exceptions vs Compiler error
+## Runtime Exceptions vs Compiler error
 
 A **run-time exception**, as the name implies, will only occur when the code is actually running. The code will complie and can be executed but will throw an exception. Some reasons can be:
 
