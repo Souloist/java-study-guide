@@ -8,6 +8,7 @@
 - [Constructors](#constructors)
 - [Static vs Non-Static](#static-vs-non-static)
 - [Public vs Private](#public-vs-private)
+- [Overloading vs Overriding](#overloading-vs-overriding)
 - [Run-time Exception vs Compiler Error](#runtime-exception-vs-compiler-error)
 
 ## Stack vs Heap
@@ -135,7 +136,17 @@ public class Dog {
 
 **tldr: Statics can't see instance variable states**
 
-## Public vs Private 
+## Public vs Private
+
+## Overloading vs Overridding
+
+**With respect to dynamic method selection:**
+
+Dynamic method selection only happens for **overriden** methods
+- When instance method of subtype overrides class of supertype
+ 
+Dynamic method selection does not happen for **overloaded** methods
+- When some other class has two methods, one for the supertype and one for the subtype
 
 ## Runtime Exceptions vs Compiler error
 
