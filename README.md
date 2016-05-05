@@ -8,6 +8,7 @@
 - [Constructors](#constructors)
 - [Static vs Non-Static](#static-vs-non-static)
 - [Public vs Private](#public-vs-private)
+- [Run-time Exception vs Compiler Error](#runtime-exception-vs-compiler-error)
 
 ## Stack vs Heap
 
@@ -135,6 +136,22 @@ public class Dog {
 **tldr: Statics can't see instance variable states**
 
 ## Public vs Private 
+
+## Runtime Exceptions vs Compiler error
+
+A **run-time exception**, as the name implies, will only occur when the code is actually running. The code will complie and can be executed but will throw an exception. Some reasons can be:
+
+- Using variable that are actually ```null``` (potentially causing NullPointerexception)
+- Illegal indexes on arrays
+- accessing resources that are unavailable 
+- missing classes on classpath (at run-time)
+
+A **compiler error** means that the code will not compile, generally due to syntax errors
+
+- missing brackets
+- missing semicolons
+- accessing private fields in other classes
+- missing classes on the classpath (at compile time)
 
 ## Java Collections Diagram
 
