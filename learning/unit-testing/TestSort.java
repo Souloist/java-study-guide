@@ -2,7 +2,8 @@
 public class TestSort {
 
 	/* Test Sort.sort method */
-	public static void testSort(){
+	@org.junit.Test
+	public void testSort(){
 		String[] inputs = {"milvia", "zero", "josh", "trump"};
 		String[] expected = {"josh", "milvia", "trump", "zero"};
 		String[] actual = Sort.sort(inputs);
@@ -10,7 +11,8 @@ public class TestSort {
 		org.junit.Assert.assertArrayEquals(expected, actual);
 	}
 
-	public static void testIndexOfSmallest(){
+	@org.junit.Test
+	public void testIndexOfSmallest(){
 		String[] inputs = {"milvia", "zero", "josh", "trump"};
 		int expected = 2;
 		int actual = Sort.indexOfSmallest(inputs,2);
@@ -23,7 +25,6 @@ public class TestSort {
 	}
 
 	public static void main(String[] args){
-		testSort();
-		testIndexOfSmallest();
+		jh61b.junit.TestRunner.runTests("all", TestSort.class);
 	}
 }
