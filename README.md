@@ -4,6 +4,7 @@
 
 - [Stack vs Heap](#stack-vs-heap)
 - [Object Orientation](#object-orientation)
+- [Interface vs Implementation Inheritance](#interface-vs-implementation-inheritance)
 - [Steps of Object Creation](#steps-of-object-creation)
 - [Constructors](#constructors)
 - [Static vs Non-Static](#static-vs-non-static)
@@ -34,6 +35,21 @@ There are three key features in object-oriented programming:
 2. **Inheritance**
 3. **Polymorphism**
 
+## Interface vs Implementation Inheritance
+
+Interface Inheritance (a.k.a what)
+- Allows the generalization of code in a powerful, simply manner
+
+Implementation Inheritance (a.k.a how)
+
+**Pros**
+- Allows code-reuse: subclasses can rely on superclasses or interfaces (using **default** keyword)
+- Gives another dimension of control to subclass designers: can deccide whether or not to override default implementations
+
+**Cons**
+- Makes it harder to keep track of where something was actually implemented
+- Remembering arcane rules for resolving conflicts
+- Breaks encapsulation
 
 ## Steps of Object Creation
 
